@@ -56,15 +56,18 @@
 							<string key="NSFrame">{{13, 10}, {642, 375}}</string>
 							<reference key="NSSuperview" ref="1037298196"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="1062097631"/>
+							<reference key="NSNextKeyView" ref="244975060"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<array class="NSMutableArray" key="NSTabViewItems">
 								<object class="NSTabViewItem" id="31211086">
 									<string key="NSIdentifier">1</string>
 									<object class="NSView" key="NSView" id="244975060">
-										<nil key="NSNextResponder"/>
+										<reference key="NSNextResponder" ref="1030399112"/>
 										<int key="NSvFlags">256</int>
 										<string key="NSFrame">{{10, 33}, {622, 329}}</string>
+										<reference key="NSSuperview" ref="1030399112"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 									</object>
 									<string key="NSLabel">General</string>
 									<object class="NSColor" key="NSColor" id="788752085">
@@ -81,11 +84,9 @@
 								<object class="NSTabViewItem" id="861666773">
 									<string key="NSIdentifier">2</string>
 									<object class="NSView" key="NSView" id="1062097631">
-										<reference key="NSNextResponder" ref="1030399112"/>
+										<nil key="NSNextResponder"/>
 										<int key="NSvFlags">256</int>
 										<string key="NSFrame">{{10, 33}, {622, 329}}</string>
-										<reference key="NSSuperview" ref="1030399112"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView"/>
 										<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									</object>
@@ -93,8 +94,19 @@
 									<reference key="NSColor" ref="788752085"/>
 									<reference key="NSTabView" ref="1030399112"/>
 								</object>
+								<object class="NSTabViewItem" id="991425933">
+									<object class="NSView" key="NSView" id="267081280">
+										<nil key="NSNextResponder"/>
+										<int key="NSvFlags">256</int>
+										<string key="NSFrame">{{10, 33}, {622, 329}}</string>
+										<reference key="NSNextKeyView"/>
+									</object>
+									<string key="NSLabel">About</string>
+									<reference key="NSColor" ref="788752085"/>
+									<reference key="NSTabView" ref="1030399112"/>
+								</object>
 							</array>
-							<reference key="NSSelectedTabViewItem" ref="861666773"/>
+							<reference key="NSSelectedTabViewItem" ref="31211086"/>
 							<object class="NSFont" key="NSFont">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">13</double>
@@ -104,7 +116,7 @@
 							<bool key="NSAllowTruncatedLabels">YES</bool>
 							<bool key="NSDrawsBackground">YES</bool>
 							<array class="NSMutableArray" key="NSSubviews">
-								<reference ref="1062097631"/>
+								<reference ref="244975060"/>
 							</array>
 						</object>
 					</array>
@@ -179,6 +191,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="31211086"/>
 							<reference ref="861666773"/>
+							<reference ref="991425933"/>
 						</array>
 						<reference key="parent" ref="1037298196"/>
 					</object>
@@ -208,6 +221,19 @@
 						<reference key="object" ref="244975060"/>
 						<reference key="parent" ref="31211086"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">106</int>
+						<reference key="object" ref="991425933"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="267081280"/>
+						</array>
+						<reference key="parent" ref="1030399112"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">107</int>
+						<reference key="object" ref="267081280"/>
+						<reference key="parent" ref="991425933"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -219,6 +245,8 @@
 				<string key="103.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="104.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="105.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="106.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="107.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="12.IBWindowTemplateEditedContentRect">{{132, 373}, {668, 368}}</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -227,7 +255,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">105</int>
+			<int key="maxID">116</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

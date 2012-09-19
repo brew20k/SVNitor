@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
+		0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */; };
+		0AF4F3F5160955BB00B5FC41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F4160955BB00B5FC41 /* main.m */; };
+		0AF4F3F9160955BB00B5FC41 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F7160955BB00B5FC41 /* Credits.rtf */; };
+		0AF4F3FC160955BB00B5FC41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */; };
+		0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */; };
+		0AF4F407160955BB00B5FC41 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F406160955BB00B5FC41 /* SenTestingKit.framework */; };
+		0AF4F408160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
+		0AF4F410160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F40E160955BB00B5FC41 /* InfoPlist.strings */; };
+		0AF4F413160955BB00B5FC41 /* SVNitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F412160955BB00B5FC41 /* SVNitorTests.m */; };
+		0AF4F42D16095F9100B5FC41 /* StatusMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AF4F409160955BB00B5FC41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AF4F3DB160955BA00B5FC41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AF4F3E3160955BA00B5FC41;
+			remoteInfo = SVNitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0AF4F3EC160955BB00B5FC41 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0AF4F3ED160955BB00B5FC41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0AF4F3F0160955BB00B5FC41 /* SVNitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SVNitor-Info.plist"; sourceTree = "<group>"; };
+		0AF4F3F2160955BB00B5FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AF4F3F4160955BB00B5FC41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AF4F3F6160955BB00B5FC41 /* SVNitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVNitor-Prefix.pch"; sourceTree = "<group>"; };
+		0AF4F3F8160955BB00B5FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AF4F3FE160955BB00B5FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0AF4F405160955BB00B5FC41 /* SVNitorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVNitorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF4F406160955BB00B5FC41 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0AF4F40D160955BB00B5FC41 /* SVNitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SVNitorTests-Info.plist"; sourceTree = "<group>"; };
+		0AF4F40F160955BB00B5FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AF4F411160955BB00B5FC41 /* SVNitorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNitorTests.h; sourceTree = "<group>"; };
+		0AF4F412160955BB00B5FC41 /* SVNitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNitorTests.m; sourceTree = "<group>"; };
+		0AF4F42B16095F9100B5FC41 /* StatusMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMenuDelegate.h; sourceTree = "<group>"; };
+		0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusMenuDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AF4F3E1160955BA00B5FC41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF4F401160955BB00B5FC41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F407160955BB00B5FC41 /* SenTestingKit.framework in Frameworks */,
+				0AF4F408160955BB00B5FC41 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AF4F3D9160955BA00B5FC41 = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3EE160955BB00B5FC41 /* SVNitor */,
+				0AF4F40B160955BB00B5FC41 /* SVNitorTests */,
+				0AF4F3E7160955BB00B5FC41 /* Frameworks */,
+				0AF4F3E5160955BA00B5FC41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AF4F3E5160955BA00B5FC41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3E4160955BA00B5FC41 /* SVNitor.app */,
+				0AF4F405160955BB00B5FC41 /* SVNitorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AF4F3E7160955BB00B5FC41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */,
+				0AF4F406160955BB00B5FC41 /* SenTestingKit.framework */,
+				0AF4F3EA160955BB00B5FC41 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AF4F3EA160955BB00B5FC41 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3EB160955BB00B5FC41 /* AppKit.framework */,
+				0AF4F3EC160955BB00B5FC41 /* CoreData.framework */,
+				0AF4F3ED160955BB00B5FC41 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0AF4F3EE160955BB00B5FC41 /* SVNitor */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F42616095C0700B5FC41 /* Resources */,
+				0AF4F42516095BF500B5FC41 /* Classes */,
+				0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */,
+				0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */,
+				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
+				0AF4F3EF160955BB00B5FC41 /* Supporting Files */,
+			);
+			path = SVNitor;
+			sourceTree = "<group>";
+		};
+		0AF4F3EF160955BB00B5FC41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3F0160955BB00B5FC41 /* SVNitor-Info.plist */,
+				0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */,
+				0AF4F3F4160955BB00B5FC41 /* main.m */,
+				0AF4F3F6160955BB00B5FC41 /* SVNitor-Prefix.pch */,
+				0AF4F3F7160955BB00B5FC41 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AF4F40B160955BB00B5FC41 /* SVNitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F411160955BB00B5FC41 /* SVNitorTests.h */,
+				0AF4F412160955BB00B5FC41 /* SVNitorTests.m */,
+				0AF4F40C160955BB00B5FC41 /* Supporting Files */,
+			);
+			path = SVNitorTests;
+			sourceTree = "<group>";
+		};
+		0AF4F40C160955BB00B5FC41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F40D160955BB00B5FC41 /* SVNitorTests-Info.plist */,
+				0AF4F40E160955BB00B5FC41 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AF4F42516095BF500B5FC41 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F42B16095F9100B5FC41 /* StatusMenuDelegate.h */,
+				0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		0AF4F42616095C0700B5FC41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AF4F3E3160955BA00B5FC41 /* SVNitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF4F416160955BB00B5FC41 /* Build configuration list for PBXNativeTarget "SVNitor" */;
+			buildPhases = (
+				0AF4F3E0160955BA00B5FC41 /* Sources */,
+				0AF4F3E1160955BA00B5FC41 /* Frameworks */,
+				0AF4F3E2160955BA00B5FC41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVNitor;
+			productName = SVNitor;
+			productReference = 0AF4F3E4160955BA00B5FC41 /* SVNitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AF4F404160955BB00B5FC41 /* SVNitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AF4F419160955BB00B5FC41 /* Build configuration list for PBXNativeTarget "SVNitorTests" */;
+			buildPhases = (
+				0AF4F400160955BB00B5FC41 /* Sources */,
+				0AF4F401160955BB00B5FC41 /* Frameworks */,
+				0AF4F402160955BB00B5FC41 /* Resources */,
+				0AF4F403160955BB00B5FC41 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF4F40A160955BB00B5FC41 /* PBXTargetDependency */,
+			);
+			name = SVNitorTests;
+			productName = SVNitorTests;
+			productReference = 0AF4F405160955BB00B5FC41 /* SVNitorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AF4F3DB160955BA00B5FC41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Letteer's Home";
+			};
+			buildConfigurationList = 0AF4F3DE160955BA00B5FC41 /* Build configuration list for PBXProject "SVNitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0AF4F3D9160955BA00B5FC41;
+			productRefGroup = 0AF4F3E5160955BA00B5FC41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AF4F3E3160955BA00B5FC41 /* SVNitor */,
+				0AF4F404160955BB00B5FC41 /* SVNitorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AF4F3E2160955BA00B5FC41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */,
+				0AF4F3F9160955BB00B5FC41 /* Credits.rtf in Resources */,
+				0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF4F402160955BB00B5FC41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F410160955BB00B5FC41 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AF4F403160955BB00B5FC41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AF4F3E0160955BA00B5FC41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F3F5160955BB00B5FC41 /* main.m in Sources */,
+				0AF4F3FC160955BB00B5FC41 /* AppDelegate.m in Sources */,
+				0AF4F42D16095F9100B5FC41 /* StatusMenuDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AF4F400160955BB00B5FC41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF4F413160955BB00B5FC41 /* SVNitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AF4F40A160955BB00B5FC41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AF4F3E3160955BA00B5FC41 /* SVNitor */;
+			targetProxy = 0AF4F409160955BB00B5FC41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF4F3F2160955BB00B5FC41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AF4F3F7160955BB00B5FC41 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF4F3F8160955BB00B5FC41 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF4F3FE160955BB00B5FC41 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0AF4F40E160955BB00B5FC41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AF4F40F160955BB00B5FC41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AF4F414160955BB00B5FC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AF4F415160955BB00B5FC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0AF4F417160955BB00B5FC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0AF4F418160955BB00B5FC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0AF4F41A160955BB00B5FC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SVNitor.app/Contents/MacOS/SVNitor";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitorTests/SVNitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0AF4F41B160955BB00B5FC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SVNitor.app/Contents/MacOS/SVNitor";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitorTests/SVNitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AF4F3DE160955BA00B5FC41 /* Build configuration list for PBXProject "SVNitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF4F414160955BB00B5FC41 /* Debug */,
+				0AF4F415160955BB00B5FC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF4F416160955BB00B5FC41 /* Build configuration list for PBXNativeTarget "SVNitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF4F417160955BB00B5FC41 /* Debug */,
+				0AF4F418160955BB00B5FC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AF4F419160955BB00B5FC41 /* Build configuration list for PBXNativeTarget "SVNitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AF4F41A160955BB00B5FC41 /* Debug */,
+				0AF4F41B160955BB00B5FC41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AF4F3DB160955BA00B5FC41 /* Project object */;
+}
