@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5621814160945C7004DDAED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5621813160945C7004DDAED /* Cocoa.framework */; };
+		D5621816160945C7004DDAED /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5621815160945C7004DDAED /* PreferencePanes.framework */; };
+		D5621820160945C7004DDAED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D562181E160945C7004DDAED /* InfoPlist.strings */; };
+		D5621824160945C7004DDAED /* SVNitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D5621823160945C7004DDAED /* SVNitor.m */; };
+		D5621826160945C8004DDAED /* SVNitor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D5621825160945C7004DDAED /* SVNitor.tiff */; };
+		D5621829160945C8004DDAED /* SVNitor.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5621827160945C8004DDAED /* SVNitor.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D5621810160945C7004DDAED /* SVNitor.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVNitor.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5621813160945C7004DDAED /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D5621815160945C7004DDAED /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		D5621818160945C7004DDAED /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D5621819160945C7004DDAED /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D562181A160945C7004DDAED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D562181D160945C7004DDAED /* SVNitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SVNitor-Info.plist"; sourceTree = "<group>"; };
+		D562181F160945C7004DDAED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D5621821160945C7004DDAED /* SVNitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVNitor-Prefix.pch"; sourceTree = "<group>"; };
+		D5621822160945C7004DDAED /* SVNitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNitor.h; sourceTree = "<group>"; };
+		D5621823160945C7004DDAED /* SVNitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNitor.m; sourceTree = "<group>"; };
+		D5621825160945C7004DDAED /* SVNitor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SVNitor.tiff; sourceTree = "<group>"; };
+		D5621828160945C8004DDAED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SVNitor.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D562180B160945C7004DDAED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5621814160945C7004DDAED /* Cocoa.framework in Frameworks */,
+				D5621816160945C7004DDAED /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5621803160945C7004DDAED = {
+			isa = PBXGroup;
+			children = (
+				D562181B160945C7004DDAED /* SVNitor */,
+				D5621812160945C7004DDAED /* Frameworks */,
+				D5621811160945C7004DDAED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5621811160945C7004DDAED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5621810160945C7004DDAED /* SVNitor.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5621812160945C7004DDAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5621813160945C7004DDAED /* Cocoa.framework */,
+				D5621815160945C7004DDAED /* PreferencePanes.framework */,
+				D5621817160945C7004DDAED /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5621817160945C7004DDAED /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5621818160945C7004DDAED /* AppKit.framework */,
+				D5621819160945C7004DDAED /* CoreData.framework */,
+				D562181A160945C7004DDAED /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D562181B160945C7004DDAED /* SVNitor */ = {
+			isa = PBXGroup;
+			children = (
+				D5621822160945C7004DDAED /* SVNitor.h */,
+				D5621823160945C7004DDAED /* SVNitor.m */,
+				D5621825160945C7004DDAED /* SVNitor.tiff */,
+				D5621827160945C8004DDAED /* SVNitor.xib */,
+				D562181C160945C7004DDAED /* Supporting Files */,
+			);
+			path = SVNitor;
+			sourceTree = "<group>";
+		};
+		D562181C160945C7004DDAED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D562181D160945C7004DDAED /* SVNitor-Info.plist */,
+				D562181E160945C7004DDAED /* InfoPlist.strings */,
+				D5621821160945C7004DDAED /* SVNitor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D562180C160945C7004DDAED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D562180F160945C7004DDAED /* SVNitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D562182C160945C8004DDAED /* Build configuration list for PBXNativeTarget "SVNitor" */;
+			buildPhases = (
+				D562180A160945C7004DDAED /* Sources */,
+				D562180B160945C7004DDAED /* Frameworks */,
+				D562180C160945C7004DDAED /* Headers */,
+				D562180D160945C7004DDAED /* Resources */,
+				D562180E160945C7004DDAED /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVNitor;
+			productName = SVNitor;
+			productReference = D5621810160945C7004DDAED /* SVNitor.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5621805160945C7004DDAED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Purdue;
+			};
+			buildConfigurationList = D5621808160945C7004DDAED /* Build configuration list for PBXProject "SVNitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D5621803160945C7004DDAED;
+			productRefGroup = D5621811160945C7004DDAED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D562180F160945C7004DDAED /* SVNitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D562180D160945C7004DDAED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5621820160945C7004DDAED /* InfoPlist.strings in Resources */,
+				D5621826160945C8004DDAED /* SVNitor.tiff in Resources */,
+				D5621829160945C8004DDAED /* SVNitor.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		D562180E160945C7004DDAED /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D562180A160945C7004DDAED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5621824160945C7004DDAED /* SVNitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D562181E160945C7004DDAED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D562181F160945C7004DDAED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D5621827160945C8004DDAED /* SVNitor.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5621828160945C8004DDAED /* en */,
+			);
+			name = SVNitor.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D562182A160945C8004DDAED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D562182B160945C8004DDAED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D562182D160945C8004DDAED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		D562182E160945C8004DDAED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
+				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5621808160945C7004DDAED /* Build configuration list for PBXProject "SVNitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D562182A160945C8004DDAED /* Debug */,
+				D562182B160945C8004DDAED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D562182C160945C8004DDAED /* Build configuration list for PBXNativeTarget "SVNitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D562182D160945C8004DDAED /* Debug */,
+				D562182E160945C8004DDAED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5621805160945C7004DDAED /* Project object */;
+}
