@@ -12,6 +12,7 @@
   IBOutlet NSMenu *statusMenu;
   NSStatusItem *statusItem;
   NSMenuItem *quitBtn;
+  NSWindowController *settingsWindow;
 }
 
 @property (assign) IBOutlet NSMenuItem *pauseBtn;

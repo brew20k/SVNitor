@@ -17,7 +17,8 @@
 		0AF4F408160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
 		0AF4F410160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F40E160955BB00B5FC41 /* InfoPlist.strings */; };
 		0AF4F413160955BB00B5FC41 /* SVNitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F412160955BB00B5FC41 /* SVNitorTests.m */; };
-		0AF4F42D16095F9100B5FC41 /* StatusMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */; };
+		0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */; };
+		0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F431160A251500B5FC41 /* SettingsWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,9 @@
 		0AF4F40F160955BB00B5FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0AF4F411160955BB00B5FC41 /* SVNitorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVNitorTests.h; sourceTree = "<group>"; };
 		0AF4F412160955BB00B5FC41 /* SVNitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVNitorTests.m; sourceTree = "<group>"; };
-		0AF4F42B16095F9100B5FC41 /* StatusMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMenuDelegate.h; sourceTree = "<group>"; };
-		0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusMenuDelegate.m; sourceTree = "<group>"; };
+		0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
+		0AF4F430160A251500B5FC41 /* SettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWindowController.h; sourceTree = "<group>"; };
+		0AF4F431160A251500B5FC41 /* SettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				0AF4F42616095C0700B5FC41 /* Resources */,
-				0AF4F42516095BF500B5FC41 /* Classes */,
 				0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */,
 				0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */,
-				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
 				0AF4F3EF160955BB00B5FC41 /* Supporting Files */,
+				0AF4F430160A251500B5FC41 /* SettingsWindowController.h */,
+				0AF4F431160A251500B5FC41 /* SettingsWindowController.m */,
 			);
 			path = SVNitor;
 			sourceTree = "<group>";
@@ -158,18 +160,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0AF4F42516095BF500B5FC41 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0AF4F42B16095F9100B5FC41 /* StatusMenuDelegate.h */,
-				0AF4F42C16095F9100B5FC41 /* StatusMenuDelegate.m */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		0AF4F42616095C0700B5FC41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
+				0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -248,6 +243,7 @@
 				0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */,
 				0AF4F3F9160955BB00B5FC41 /* Credits.rtf in Resources */,
 				0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */,
+				0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +280,7 @@
 			files = (
 				0AF4F3F5160955BB00B5FC41 /* main.m in Sources */,
 				0AF4F3FC160955BB00B5FC41 /* AppDelegate.m in Sources */,
-				0AF4F42D16095F9100B5FC41 /* StatusMenuDelegate.m in Sources */,
+				0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

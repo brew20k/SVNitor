@@ -12,7 +12,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+  // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
 }
 
@@ -20,7 +20,7 @@
 {
   statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
   [statusItem setMenu:statusMenu];
-  [statusItem setTitle:@"Status"];
+  [statusItem setTitle:@"S"];
   [statusItem setHighlightMode:YES];
 }
 
@@ -32,6 +32,12 @@
 -(IBAction)quitApplication:(id)sender
 {
   [NSApp terminate: nil];
+}
+
+-(IBAction)openSettings:(id)sender
+{
+  settingsWindow = [[NSWindowController alloc] initWithWindowNibName:@"SettingsWindow"];
+  [settingsWindow showWindow:nil];
 }
 
 @end
