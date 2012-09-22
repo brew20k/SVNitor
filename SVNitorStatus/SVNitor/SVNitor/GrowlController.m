@@ -33,11 +33,11 @@
 {
 		[GrowlApplicationBridge notifyWithTitle:@"SVNitor"
              description:@"SVNitor"
-             notificationName:(NSString *) @"New SVN Commit"
-             iconData:nil
-             priority:0
-             isSticky:YES
-             clickContext:nil
-             identifier:@"SVNitor identifier"];
+         notificationName:(NSString *)[[growlNotifications objectForKey:@"ALL"] objectForKey:@"NotiferNewCommit"]
+                iconData:nil
+                priority:0
+                isSticky:NO
+            clickContext:nil
+              identifier:@"SVNitor identifier"];
 }
 @end
