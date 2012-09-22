@@ -43,7 +43,8 @@
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-  if ([tableColumn identifier] == @"name") {
+  NSLog(@"repositories %@", [tableColumn identifier]);
+  if ([[tableColumn identifier] isEqualToString:@"name"]) {
     return [[repositories objectAtIndex:row] name];
   } else {
     return [[repositories objectAtIndex:row] repositoryPath];
