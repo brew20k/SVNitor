@@ -15,6 +15,6 @@
   NSDictionary *growlNotifications;
 }
 
--(void) notifyGrowl;
+-(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description;
 
 @end
