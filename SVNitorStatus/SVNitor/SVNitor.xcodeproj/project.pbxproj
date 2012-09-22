@@ -20,6 +20,7 @@
 		0AF4F413160955BB00B5FC41 /* SVNitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F412160955BB00B5FC41 /* SVNitorTests.m */; };
 		0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */; };
 		0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F431160A251500B5FC41 /* SettingsWindowController.m */; };
+		D5A3ABE3160E254100093EB4 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A3ABE2160E254100093EB4 /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +33,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D5A3ABE0160E24E300093EB4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D5A3ABE3160E254100093EB4 /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A2B619E160D6D4200C3CFD9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
-		0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "../../../../../Desktop/Growl-2.0-SDK/Framework/Growl.framework"; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +71,7 @@
 		0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
 		0AF4F430160A251500B5FC41 /* SettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWindowController.h; sourceTree = "<group>"; };
 		0AF4F431160A251500B5FC41 /* SettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindowController.m; sourceTree = "<group>"; };
+		D5A3ABE2160E254100093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +98,6 @@
 		0AF4F3D9160955BA00B5FC41 = {
 			isa = PBXGroup;
 			children = (
-				0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */,
 				0AF4F3EE160955BB00B5FC41 /* SVNitor */,
 				0AF4F40B160955BB00B5FC41 /* SVNitorTests */,
 				0AF4F3E7160955BB00B5FC41 /* Frameworks */,
@@ -104,6 +117,7 @@
 		0AF4F3E7160955BB00B5FC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5A3ABE2160E254100093EB4 /* Growl.framework */,
 				0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */,
 				0AF4F406160955BB00B5FC41 /* SenTestingKit.framework */,
 				0AF4F3EA160955BB00B5FC41 /* Other Frameworks */,
@@ -186,6 +200,7 @@
 				0AF4F3E0160955BA00B5FC41 /* Sources */,
 				0AF4F3E1160955BA00B5FC41 /* Frameworks */,
 				0AF4F3E2160955BA00B5FC41 /* Resources */,
+				D5A3ABE0160E24E300093EB4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
