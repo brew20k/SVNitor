@@ -23,4 +23,20 @@
   return self;
 }
 
+- (id) initWithCoder: (NSCoder *)coder
+{
+  if (self = [super init])
+  {
+    [self setName: [coder decodeObjectForKey:@"name"]];
+    [self setRepositoryPath: [coder decodeObjectForKey:@"repositoryPath"]];
+  }
+  return self;
+}
+
+- (void) encodeWithCoder: (NSCoder *)coder
+{
+  [coder encodeObject:name forKey:@"name"];
+  [coder encodeObject:repositoryPath forKey:@"repositoryPath"];
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SettingsWindowController.h"
+#import "Repository.h"
 
 @implementation AppDelegate
 
@@ -15,6 +16,7 @@
 {
   // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
+  [self saveData:[[Repository alloc] init] forKey:@"repository"];
 }
 
 - (void)awakeFromNib
@@ -39,9 +41,6 @@
 {
   settingsWindow = [[SettingsWindowController alloc] initWithWindowNibName:@"SettingsWindow"];
   [settingsWindow showWindow:nil];
-  
-  [self saveData:@"Hello" forKey:@"test"];
-  
 }
 
 - (NSString *)pathForDataFile

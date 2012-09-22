@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Repository : NSObject
+@interface Repository : NSObject <NSCoding>
 {
 @private
   NSString *name;

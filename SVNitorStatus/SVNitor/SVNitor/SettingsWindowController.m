@@ -8,6 +8,7 @@
 
 #import "SettingsWindowController.h"
 #import "Repository.h"
+#import "AppDelegate.h"
 
 @implementation SettingsWindowController
 
@@ -16,7 +17,13 @@
 - (void)windowWillLoad
 {
   repositories = [[NSMutableArray alloc] init];
-  [repositories addObject:[[Repository alloc] init]];
+  
+  Repository *repo = [(AppDelegate *)[[NSApplication sharedApplication] delegate] loadDataForKey:@"repository"];
+  
+  if (repo)
+  {
+    [repositories addObject:repo];
+  }
 }
 
 @end
