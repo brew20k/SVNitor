@@ -527,7 +527,7 @@
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="516653022">
+			<object class="NSCustomObject" id="387711841">
 				<string key="NSClassName">RepositoryViewController</string>
 			</object>
 			<object class="NSUserDefaultsController" id="432861368">
@@ -546,11 +546,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="516653022"/>
-						<reference key="destination" ref="573015078"/>
+						<string key="label">dataSource</string>
+						<reference key="source" ref="573015078"/>
+						<reference key="destination" ref="387711841"/>
 					</object>
-					<int key="connectionID">262</int>
+					<int key="connectionID">274</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1221,8 +1221,8 @@
 						<reference key="parent" ref="679065641"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">261</int>
-						<reference key="object" ref="516653022"/>
+						<int key="objectID">273</int>
+						<reference key="object" ref="387711841"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -1286,7 +1286,7 @@
 				<string key="248.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="251.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="252.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="261.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="273.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="5.NSWindowTemplate.visibleAtLaunch"/>
 				<object class="NSMutableDictionary" key="50.IBAttributePlaceholdersKey">
@@ -1335,7 +1335,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">262</int>
+			<int key="maxID">274</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

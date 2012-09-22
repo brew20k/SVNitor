@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RepositoryViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+@interface RepositoryViewController : NSViewController <NSTableViewDataSource>
+{
+  NSMutableArray *repositories;
+}
+
+@property (copy) NSMutableArray *repositories;
+
 
 @end
