@@ -37,13 +37,11 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-  NSLog(@"repositories %i", (int)[repositories count]);
   return [repositories count];
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-  NSLog(@"repositories %@", [tableColumn identifier]);
   if ([[tableColumn identifier] isEqualToString:@"name"]) {
     return [[repositories objectAtIndex:row] name];
   } else {
