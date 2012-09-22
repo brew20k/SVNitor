@@ -66,7 +66,7 @@
     [fileManager createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:nil];
   }
   
-  NSString *fileName = @"Settings";
+  NSString *fileName = @"Settings.xml";
   return [folder stringByAppendingPathComponent: fileName];
 }
 
