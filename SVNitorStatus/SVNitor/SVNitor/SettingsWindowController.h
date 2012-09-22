@@ -15,4 +15,7 @@
 
 @property (copy) NSMutableArray *repositories;
 
+-(IBAction)addItem:(id)sender;
+-(IBAction)removeItem:(id)sender;
+
 @end

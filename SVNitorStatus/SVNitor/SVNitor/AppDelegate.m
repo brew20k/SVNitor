@@ -16,7 +16,10 @@
 {
   // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
-  [self saveData:[[Repository alloc] init] forKey:@"repository"];
+  NSMutableArray *array = [[NSMutableArray alloc] init];
+  [array addObject:[[Repository alloc] init]];
+  [array addObject:[[Repository alloc] init]];
+  [self saveData:array forKey:@"repository"];
 }
 
 - (void)awakeFromNib

@@ -16,14 +16,25 @@
 
 - (void)windowWillLoad
 {
-  repositories = [[NSMutableArray alloc] init];
-  
-  Repository *repo = [(AppDelegate *)[[NSApplication sharedApplication] delegate] loadDataForKey:@"repository"];
+  NSArray *repo = [(AppDelegate *)[[NSApplication sharedApplication] delegate] loadDataForKey:@"repository"];
   
   if (repo)
   {
-    [repositories addObject:repo];
+    repositories = [[NSMutableArray alloc] initWithArray:repo];
+  } else
+  {
+    repositories = [[NSMutableArray alloc] init];
   }
+}
+
+-(IBAction)addItem:(id)sender
+{
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+}
+
+-(IBAction)removeItem:(id)sender
+{
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
 }
 
 @end

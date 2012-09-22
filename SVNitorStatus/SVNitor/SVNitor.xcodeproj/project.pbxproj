@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0A2B619E160D6D4200C3CFD9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "../../../../../Desktop/Growl-2.0-SDK/Framework/Growl.framework"; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -83,6 +84,7 @@
 		0AF4F3D9160955BA00B5FC41 = {
 			isa = PBXGroup;
 			children = (
+				0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */,
 				0AF4F3EE160955BB00B5FC41 /* SVNitor */,
 				0AF4F40B160955BB00B5FC41 /* SVNitorTests */,
 				0AF4F3E7160955BB00B5FC41 /* Frameworks */,
@@ -398,11 +400,16 @@
 		0AF4F417160955BB00B5FC41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Desktop/Growl-2.0-SDK/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
 				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,11 +417,16 @@
 		0AF4F418160955BB00B5FC41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Desktop/Growl-2.0-SDK/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
 				INFOPLIST_FILE = "SVNitor/SVNitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
