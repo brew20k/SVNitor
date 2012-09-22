@@ -40,7 +40,7 @@
 -(IBAction)notifyGrowl:(id)sender
 {
   growlController = [[GrowlController alloc] init];
-  [growlController notifyGrowl];
+  [growlController notifyGrowl:@"title" withDesc:@"desc"];
 
 }
 

@@ -29,15 +29,16 @@
   return regDict;
 }
 
-- (void) notifyGrowl
+-(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description
 {
-		[GrowlApplicationBridge notifyWithTitle:@"SVNitor"
-             description:@"SVNitor"
-         notificationName:(NSString *)[[growlNotifications objectForKey:@"ALL"] objectForKey:@"NotiferNewCommit"]
-                iconData:nil
-                priority:0
-                isSticky:NO
-            clickContext:nil
-              identifier:@"SVNitor identifier"];
+    NSString *notificationName = [[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotiferNewCommit"];
+		[GrowlApplicationBridge notifyWithTitle:title
+             description:description
+             notificationName:(NSString *)[[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotifierNewCommit"]
+             iconData:nil
+             priority:0
+             isSticky:YES
+             clickContext:nil
+             identifier:@"SVNitor identifier"];
 }
 @end
