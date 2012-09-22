@@ -24,6 +24,7 @@
 		D5A3AC29160E49AD00093EB4 /* Growl.framework in Copy Growl 2.0 */ = {isa = PBXBuildFile; fileRef = D5A3AC24160E406900093EB4 /* Growl.framework */; };
 		D5A3AC2D160E4A7E00093EB4 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
 		D5A3AC31160E4ACC00093EB4 /* Growl.framework in Copy Growl Legacy */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
+		D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		D5A3ABEC160E28DC00093EB4 /* GrowlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlController.m; sourceTree = "<group>"; };
 		D5A3AC24160E406900093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Growl.framework; sourceTree = "<group>"; };
 		D5A3AC2C160E4A7E00093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Legacy/Growl.framework; sourceTree = "<group>"; };
+		D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GrowlNotifications.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				0AF4F3F4160955BB00B5FC41 /* main.m */,
 				0AF4F3F6160955BB00B5FC41 /* SVNitor-Prefix.pch */,
 				0AF4F3F7160955BB00B5FC41 /* Credits.rtf */,
+				D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				0AF4F3F9160955BB00B5FC41 /* Credits.rtf in Resources */,
 				0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */,
 				0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */,
+				D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

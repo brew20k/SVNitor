@@ -44,6 +44,7 @@
 -(IBAction)notifyGrowl:(id)sender
 {
   growlController = [[GrowlController alloc] init];
+  [growlController notifyGrowl];
 
 }
 

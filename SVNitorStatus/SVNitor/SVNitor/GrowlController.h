@@ -11,6 +11,10 @@
 #import <Growl/Growl.h>
 
 @interface GrowlController : NSObject <GrowlApplicationBridgeDelegate>
+{
+  NSDictionary *growlNotifications;
+}
 
+-(void) notifyGrowl;
 
 @end
