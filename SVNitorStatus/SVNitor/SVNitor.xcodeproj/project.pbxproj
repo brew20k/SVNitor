@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B619F160D6D4200C3CFD9 /* Repository.m */; };
-		0A6F971B160E478100846A8D /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F971A160E478100846A8D /* RepositoryViewController.m */; };
 		0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
 		0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */; };
 		0AF4F3F5160955BB00B5FC41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F4160955BB00B5FC41 /* main.m */; };
@@ -21,6 +20,11 @@
 		0AF4F413160955BB00B5FC41 /* SVNitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F412160955BB00B5FC41 /* SVNitorTests.m */; };
 		0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */; };
 		0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F431160A251500B5FC41 /* SettingsWindowController.m */; };
+		D5A3ABED160E28DC00093EB4 /* GrowlController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3ABEC160E28DC00093EB4 /* GrowlController.m */; };
+		D5A3AC29160E49AD00093EB4 /* Growl.framework in Copy Growl 2.0 */ = {isa = PBXBuildFile; fileRef = D5A3AC24160E406900093EB4 /* Growl.framework */; };
+		D5A3AC2D160E4A7E00093EB4 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
+		D5A3AC31160E4ACC00093EB4 /* Growl.framework in Copy Growl Legacy */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
+		D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +37,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D5A3AC23160E404800093EB4 /* Copy Growl 2.0 */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D5A3AC29160E49AD00093EB4 /* Growl.framework in Copy Growl 2.0 */,
+			);
+			name = "Copy Growl 2.0";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5A3AC2E160E4A9A00093EB4 /* Copy Growl Legacy */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D5A3AC31160E4ACC00093EB4 /* Growl.framework in Copy Growl Legacy */,
+			);
+			name = "Copy Growl Legacy";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A2B619E160D6D4200C3CFD9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
-		0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "../../../../../Desktop/Growl-2.0-SDK/Framework/Growl.framework"; sourceTree = "<group>"; };
-		0A6F9719160E478100846A8D /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
-		0A6F971A160E478100846A8D /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -61,6 +87,11 @@
 		0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
 		0AF4F430160A251500B5FC41 /* SettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWindowController.h; sourceTree = "<group>"; };
 		0AF4F431160A251500B5FC41 /* SettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindowController.m; sourceTree = "<group>"; };
+		D5A3ABEB160E28DC00093EB4 /* GrowlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlController.h; sourceTree = "<group>"; };
+		D5A3ABEC160E28DC00093EB4 /* GrowlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlController.m; sourceTree = "<group>"; };
+		D5A3AC24160E406900093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Growl.framework; sourceTree = "<group>"; };
+		D5A3AC2C160E4A7E00093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Legacy/Growl.framework; sourceTree = "<group>"; };
+		D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GrowlNotifications.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */,
+				D5A3AC2D160E4A7E00093EB4 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,39 +116,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A6F971C160E48E400846A8D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0A2B619E160D6D4200C3CFD9 /* Repository.h */,
-				0A2B619F160D6D4200C3CFD9 /* Repository.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		0A6F971D160E48EB00846A8D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0AF4F430160A251500B5FC41 /* SettingsWindowController.h */,
-				0AF4F431160A251500B5FC41 /* SettingsWindowController.m */,
-				0A6F9719160E478100846A8D /* RepositoryViewController.h */,
-				0A6F971A160E478100846A8D /* RepositoryViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		0A6F971E160E48F800846A8D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
-				0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		0AF4F3D9160955BA00B5FC41 = {
 			isa = PBXGroup;
 			children = (
-				0A2B61A1160D7A3E00C3CFD9 /* Growl.framework */,
+				D5A3AC28160E499800093EB4 /* Growl */,
 				0AF4F3EE160955BB00B5FC41 /* SVNitor */,
 				0AF4F40B160955BB00B5FC41 /* SVNitorTests */,
 				0AF4F3E7160955BB00B5FC41 /* Frameworks */,
@@ -156,13 +159,9 @@
 		0AF4F3EE160955BB00B5FC41 /* SVNitor */ = {
 			isa = PBXGroup;
 			children = (
-				0A6F971E160E48F800846A8D /* Views */,
-				0A6F971D160E48EB00846A8D /* Controllers */,
-				0A6F971C160E48E400846A8D /* Models */,
 				0AF4F42616095C0700B5FC41 /* Resources */,
-				0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */,
-				0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */,
 				0AF4F3EF160955BB00B5FC41 /* Supporting Files */,
+				D5A3ABEE160E28FD00093EB4 /* Classes */,
 			);
 			path = SVNitor;
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 				0AF4F3F4160955BB00B5FC41 /* main.m */,
 				0AF4F3F6160955BB00B5FC41 /* SVNitor-Prefix.pch */,
 				0AF4F3F7160955BB00B5FC41 /* Credits.rtf */,
+				D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -201,8 +201,50 @@
 		0AF4F42616095C0700B5FC41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
+				0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D5A3ABEE160E28FD00093EB4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */,
+				0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */,
+				D5A3ABEB160E28DC00093EB4 /* GrowlController.h */,
+				D5A3ABEC160E28DC00093EB4 /* GrowlController.m */,
+				0AF4F430160A251500B5FC41 /* SettingsWindowController.h */,
+				0AF4F431160A251500B5FC41 /* SettingsWindowController.m */,
+				0A2B619E160D6D4200C3CFD9 /* Repository.h */,
+				0A2B619F160D6D4200C3CFD9 /* Repository.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D5A3AC28160E499800093EB4 /* Growl */ = {
+			isa = PBXGroup;
+			children = (
+				D5A3AC2B160E4A6600093EB4 /* Legacy */,
+				D5A3AC2A160E4A5900093EB4 /* 2.0 */,
+			);
+			name = Growl;
+			sourceTree = "<group>";
+		};
+		D5A3AC2A160E4A5900093EB4 /* 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				D5A3AC24160E406900093EB4 /* Growl.framework */,
+			);
+			name = 2.0;
+			sourceTree = "<group>";
+		};
+		D5A3AC2B160E4A6600093EB4 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				D5A3AC2C160E4A7E00093EB4 /* Growl.framework */,
+			);
+			name = Legacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +257,8 @@
 				0AF4F3E0160955BA00B5FC41 /* Sources */,
 				0AF4F3E1160955BA00B5FC41 /* Frameworks */,
 				0AF4F3E2160955BA00B5FC41 /* Resources */,
+				D5A3AC23160E404800093EB4 /* Copy Growl 2.0 */,
+				D5A3AC2E160E4A9A00093EB4 /* Copy Growl Legacy */,
 			);
 			buildRules = (
 			);
@@ -280,6 +324,7 @@
 				0AF4F3F9160955BB00B5FC41 /* Credits.rtf in Resources */,
 				0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */,
 				0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */,
+				D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +363,7 @@
 				0AF4F3FC160955BB00B5FC41 /* AppDelegate.m in Sources */,
 				0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */,
 				0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */,
-				0A6F971B160E478100846A8D /* RepositoryViewController.m in Sources */,
+				D5A3ABED160E28DC00093EB4 /* GrowlController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +478,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Desktop/Growl-2.0-SDK/Framework\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/SVNitor\"",
+					"\"$(SRCROOT)/external\"",
+					"\"$(SRCROOT)/external/Legacy\"",
+					"\"$(SRCROOT)/External/Legacy\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
@@ -450,6 +500,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Desktop/Growl-2.0-SDK/Framework\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/SVNitor\"",
+					"\"$(SRCROOT)/external\"",
+					"\"$(SRCROOT)/external/Legacy\"",
+					"\"$(SRCROOT)/External/Legacy\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVNitor/SVNitor-Prefix.pch";
