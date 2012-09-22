@@ -43,7 +43,7 @@
   
 }
 
-- (NSString *) pathForDataFile
+- (NSString *)pathForDataFile
 {
   NSFileManager *fileManager = [NSFileManager defaultManager];
   
@@ -59,7 +59,7 @@
   return [folder stringByAppendingPathComponent: fileName];
 }
 
-- (void) saveData:(id)data forKey:(NSString *)key
+- (void)saveData:(id)data forKey:(NSString *)key
 {
   NSString * path = [self pathForDataFile];
   
@@ -70,7 +70,7 @@
   [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
 
-- (id) loadDataForKey:(NSString *)key
+- (id)loadDataForKey:(NSString *)key
 {
   NSString     * path        = [self pathForDataFile];
   NSDictionary * rootObject;

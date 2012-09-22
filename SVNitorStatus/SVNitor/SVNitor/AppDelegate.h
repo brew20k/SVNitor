@@ -23,9 +23,9 @@
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem;
 - (IBAction)quitApplication:(id)sender;
 
-- (NSString *) pathForDataFile;
+- (NSString *)pathForDataFile;
 
-- (void) saveData:(id)data forKey:(NSString *)key;
-- (id) loadDataForKey:(NSString *)key;
+- (void)saveData:(id)data forKey:(NSString *)key;
+- (id)loadDataForKey:(NSString *)key;
 
 @end

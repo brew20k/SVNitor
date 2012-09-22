@@ -10,4 +10,7 @@
 
 @interface SettingsWindowController : NSWindowController
 
+@property (assign) IBOutlet NSTableView *repoTable;
+@property (assign) IBOutlet NSButton *addWorkingCopyButton;
+
 @end
