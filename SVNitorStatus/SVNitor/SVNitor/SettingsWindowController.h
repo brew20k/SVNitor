@@ -9,13 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SettingsWindowController : NSWindowController
-{
-  NSMutableArray *repositories;
-}
-
-@property (copy) NSMutableArray *repositories;
-
--(IBAction)addItem:(id)sender;
--(IBAction)removeItem:(id)sender;
 
 @end

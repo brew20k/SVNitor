@@ -13,6 +13,7 @@
 @implementation RepositoryViewController
 
 @synthesize repositories;
+@synthesize table;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,7 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+  NSLog(@"count %i, %i", (int)[repositories count], (int)[tableView numberOfRows]);
   return [repositories count];
 }
 
@@ -47,6 +49,25 @@
   } else {
     return [[repositories objectAtIndex:row] repositoryPath];
   }
+}
+
+- (IBAction)addItem:(id)sender
+{
+  [repositories addObject:[[Repository alloc] init]];
+  NSIndexSet *index = [[NSIndexSet alloc] initWithIndex:([repositories count] - 1)];
+  [table selectRowIndexes:index byExtendingSelection:NO];
+  [table editColumn:0 row:([repositories count] - 1) withEvent:nil select:YES];
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+  [table reloadData];
+}
+
+- (IBAction)removeItem:(id)sender
+{
+  if ([table selectedRow] < 0 || [table selectedRow] >= [repositories count])
+    return;
+  [repositories removeObjectAtIndex:[table selectedRow]];
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+  [table reloadData];
 }
 
 @end

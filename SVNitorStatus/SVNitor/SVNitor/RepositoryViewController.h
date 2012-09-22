@@ -11,9 +11,13 @@
 @interface RepositoryViewController : NSViewController <NSTableViewDataSource>
 {
   NSMutableArray *repositories;
+  NSTableView *table;
 }
 
 @property (copy) NSMutableArray *repositories;
+@property (nonatomic, retain) IBOutlet NSTableView *table;
 
+- (IBAction)addItem:(id)sender;
+- (IBAction)removeItem:(id)sender;
 
 @end

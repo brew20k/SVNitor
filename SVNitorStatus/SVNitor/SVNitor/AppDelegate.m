@@ -17,10 +17,6 @@
 {
   // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
-  NSMutableArray *array = [[NSMutableArray alloc] init];
-  [array addObject:[[Repository alloc] init]];
-  [array addObject:[[Repository alloc] init]];
-  [self saveData:array forKey:@"repository"];
 }
 
 - (void)awakeFromNib
@@ -77,6 +73,8 @@
   NSMutableDictionary * rootObject;
   rootObject = [NSMutableDictionary dictionary];
   
+  NSLog(@"Saving Data");
+  
   [rootObject setValue:data forKey:key];
   [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
@@ -85,6 +83,8 @@
 {
   NSString     * path        = [self pathForDataFile];
   NSDictionary * rootObject;
+  
+  NSLog(@"Loading Data");
   
   rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
   return [rootObject valueForKey:key];
