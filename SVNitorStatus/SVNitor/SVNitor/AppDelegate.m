@@ -38,6 +38,45 @@
 {
   settingsWindow = [[NSWindowController alloc] initWithWindowNibName:@"SettingsWindow"];
   [settingsWindow showWindow:nil];
+  
+  [self saveData:@"Hello" forKey:@"test"];
+  
+}
+
+- (NSString *) pathForDataFile
+{
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  
+  NSString *folder = @"~/Library/Application Support/SVNitor/";
+  folder = [folder stringByExpandingTildeInPath];
+  
+  if ([fileManager fileExistsAtPath: folder] == NO)
+  {
+    [fileManager createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:nil];
+  }
+  
+  NSString *fileName = @"Settings";
+  return [folder stringByAppendingPathComponent: fileName];
+}
+
+- (void) saveData:(id)data forKey:(NSString *)key
+{
+  NSString * path = [self pathForDataFile];
+  
+  NSMutableDictionary * rootObject;
+  rootObject = [NSMutableDictionary dictionary];
+  
+  [rootObject setValue:data forKey:key];
+  [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
+}
+
+- (id) loadDataForKey:(NSString *)key
+{
+  NSString     * path        = [self pathForDataFile];
+  NSDictionary * rootObject;
+  
+  rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+  return [rootObject valueForKey:key];
 }
 
 @end

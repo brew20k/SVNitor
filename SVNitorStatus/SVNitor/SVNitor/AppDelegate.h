@@ -21,7 +21,11 @@
 @property (assign) IBOutlet NSMenuItem *aboutBtn;
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem;
-
 - (IBAction)quitApplication:(id)sender;
+
+- (NSString *) pathForDataFile;
+
+- (void) saveData:(id)data forKey:(NSString *)key;
+- (id) loadDataForKey:(NSString *)key;
 
 @end

@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SVNitor/AppDelegate.m"
-         timestampString = "369763890.763267"
+         timestampString = "369975365.626604"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
-         landmarkName = "-openSettings:"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-pathForDataFile"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
