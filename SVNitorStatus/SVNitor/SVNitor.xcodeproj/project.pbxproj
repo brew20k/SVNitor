@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B619F160D6D4200C3CFD9 /* Repository.m */; };
+		0A3F79FF160E6604003A8364 /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F79FE160E6604003A8364 /* RepositoryViewController.m */; };
 		0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
 		0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */; };
 		0AF4F3F5160955BB00B5FC41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F4160955BB00B5FC41 /* main.m */; };
@@ -65,6 +66,8 @@
 /* Begin PBXFileReference section */
 		0A2B619E160D6D4200C3CFD9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		0A3F79FD160E6604003A8364 /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
+		0A3F79FE160E6604003A8364 /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -210,6 +213,8 @@
 		D5A3ABEE160E28FD00093EB4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0A3F79FD160E6604003A8364 /* RepositoryViewController.h */,
+				0A3F79FE160E6604003A8364 /* RepositoryViewController.m */,
 				0AF4F3FA160955BB00B5FC41 /* AppDelegate.h */,
 				0AF4F3FB160955BB00B5FC41 /* AppDelegate.m */,
 				D5A3ABEB160E28DC00093EB4 /* GrowlController.h */,
@@ -364,6 +369,7 @@
 				0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */,
 				0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */,
 				D5A3ABED160E28DC00093EB4 /* GrowlController.m in Sources */,
+				0A3F79FF160E6604003A8364 /* RepositoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
