@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2B619C160D65EB00C3CFD9 /* RepositoryTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B619B160D65EB00C3CFD9 /* RepositoryTableSource.m */; };
+		0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B619F160D6D4200C3CFD9 /* Repository.m */; };
 		0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
 		0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */; };
 		0AF4F3F5160955BB00B5FC41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F4160955BB00B5FC41 /* main.m */; };
@@ -33,8 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A2B619A160D65EB00C3CFD9 /* RepositoryTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryTableSource.h; sourceTree = "<group>"; };
-		0A2B619B160D65EB00C3CFD9 /* RepositoryTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryTableSource.m; sourceTree = "<group>"; };
+		0A2B619E160D6D4200C3CFD9 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AF4F3EB160955BB00B5FC41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,8 +128,8 @@
 				0AF4F3EF160955BB00B5FC41 /* Supporting Files */,
 				0AF4F430160A251500B5FC41 /* SettingsWindowController.h */,
 				0AF4F431160A251500B5FC41 /* SettingsWindowController.m */,
-				0A2B619A160D65EB00C3CFD9 /* RepositoryTableSource.h */,
-				0A2B619B160D65EB00C3CFD9 /* RepositoryTableSource.m */,
+				0A2B619E160D6D4200C3CFD9 /* Repository.h */,
+				0A2B619F160D6D4200C3CFD9 /* Repository.m */,
 			);
 			path = SVNitor;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				0AF4F3F5160955BB00B5FC41 /* main.m in Sources */,
 				0AF4F3FC160955BB00B5FC41 /* AppDelegate.m in Sources */,
 				0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */,
-				0A2B619C160D65EB00C3CFD9 /* RepositoryTableSource.m in Sources */,
+				0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SettingsWindowController.h"
 
 @implementation AppDelegate
 
@@ -36,7 +37,7 @@
 
 -(IBAction)openSettings:(id)sender
 {
-  settingsWindow = [[NSWindowController alloc] initWithWindowNibName:@"SettingsWindow"];
+  settingsWindow = [[SettingsWindowController alloc] initWithWindowNibName:@"SettingsWindow"];
   [settingsWindow showWindow:nil];
   
   [self saveData:@"Hello" forKey:@"test"];

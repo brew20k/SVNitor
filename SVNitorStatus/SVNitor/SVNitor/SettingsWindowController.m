@@ -7,7 +7,16 @@
 //
 
 #import "SettingsWindowController.h"
+#import "Repository.h"
 
 @implementation SettingsWindowController
+
+@synthesize repositories;
+
+- (void)windowWillLoad
+{
+  repositories = [[NSMutableArray alloc] init];
+  [repositories addObject:[[Repository alloc] init]];
+}
 
 @end

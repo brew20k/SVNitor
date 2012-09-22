@@ -2,4 +2,19 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SVNitor/AppDelegate.m"
+         timestampString = "369981035.168316"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "17"
+         endingLineNumber = "17"
+         landmarkName = "-applicationDidFinishLaunching:"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
 </Bucket>

@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface SettingsWindowController : NSWindowController
+{
+  NSMutableArray *repositories;
+}
 
-@property (assign) IBOutlet NSTableView *repoTable;
-@property (assign) IBOutlet NSButton *addWorkingCopyButton;
+@property (copy) NSMutableArray *repositories;
 
 @end
