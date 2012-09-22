@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SettingsWindowController.h"
+#import "GrowlController.h"
 #import "Repository.h"
 
 @implementation AppDelegate
@@ -38,6 +39,12 @@
 -(IBAction)quitApplication:(id)sender
 {
   [NSApp terminate: nil];
+}
+
+-(IBAction)notifyGrowl:(id)sender
+{
+  growlController = [[GrowlController alloc] init];
+
 }
 
 -(IBAction)openSettings:(id)sender
