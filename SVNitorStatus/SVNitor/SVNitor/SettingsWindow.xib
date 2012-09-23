@@ -772,6 +772,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="573015078"/>
+						<reference key="destination" ref="589673073"/>
+					</object>
+					<int key="connectionID">408</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">table</string>
 						<reference key="source" ref="589673073"/>
 						<reference key="destination" ref="573015078"/>
@@ -817,6 +825,30 @@
 						<reference key="destination" ref="78363524"/>
 					</object>
 					<int key="connectionID">404</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">repoPathField</string>
+						<reference key="source" ref="589673073"/>
+						<reference key="destination" ref="195956185"/>
+					</object>
+					<int key="connectionID">405</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">repoNameField</string>
+						<reference key="source" ref="589673073"/>
+						<reference key="destination" ref="801764505"/>
+					</object>
+					<int key="connectionID">406</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">removeItem:</string>
+						<reference key="source" ref="589673073"/>
+						<reference key="destination" ref="827399575"/>
+					</object>
+					<int key="connectionID">407</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -2277,7 +2309,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">404</int>
+			<int key="maxID">408</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2293,16 +2325,11 @@
 					<string key="className">RepositoryViewController</string>
 					<string key="superclassName">NSViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="addItem:">id</string>
 						<string key="closeWindow:">id</string>
 						<string key="openWindow:">id</string>
 						<string key="removeItem:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="addItem:">
-							<string key="name">addItem:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="closeWindow:">
 							<string key="name">closeWindow:</string>
 							<string key="candidateClassName">id</string>
@@ -2318,6 +2345,8 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="modalWindow">NSWindow</string>
+						<string key="repoNameField">NSTextField</string>
+						<string key="repoPathField">NSTextField</string>
 						<string key="repoWindow">NSWindow</string>
 						<string key="table">NSTableView</string>
 					</dictionary>
@@ -2325,6 +2354,14 @@
 						<object class="IBToOneOutletInfo" key="modalWindow">
 							<string key="name">modalWindow</string>
 							<string key="candidateClassName">NSWindow</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="repoNameField">
+							<string key="name">repoNameField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="repoPathField">
+							<string key="name">repoPathField</string>
+							<string key="candidateClassName">NSTextField</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="repoWindow">
 							<string key="name">repoWindow</string>

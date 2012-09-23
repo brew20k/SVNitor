@@ -9,17 +9,18 @@
 #import "GrowlController.h"
 
 @implementation GrowlController
+
 - (id) init
 {
   if([GrowlApplicationBridge isGrowlRunning])
   {
     [GrowlApplicationBridge setGrowlDelegate:self];
-    return self;
   }
   else
   {
     //TODO: implement automatic pause of notifications.
   }
+  return self;
 }
 
 - (NSDictionary *) registrationDictionaryForGrowl

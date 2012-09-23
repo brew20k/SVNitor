@@ -16,6 +16,8 @@
 @synthesize table;
 @synthesize repoWindow;
 @synthesize modalWindow;
+@synthesize repoNameField;
+@synthesize repoPathField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +42,6 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-  NSLog(@"count %i, %i", (int)[repositories count], (int)[tableView numberOfRows]);
   return [repositories count];
 }
 
@@ -53,15 +54,15 @@
   }
 }
 
-- (IBAction)addItem:(id)sender
-{
-  [repositories addObject:[[Repository alloc] init]];
-  NSIndexSet *index = [[NSIndexSet alloc] initWithIndex:([repositories count] - 1)];
-  [table selectRowIndexes:index byExtendingSelection:NO];
-  [table editColumn:0 row:([repositories count] - 1) withEvent:nil select:YES];
-  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
-  [table reloadData];
-}
+//- (IBAction)addItem:(id)sender
+//{
+//  [repositories addObject:[[Repository alloc] init]];
+//  NSIndexSet *index = [[NSIndexSet alloc] initWithIndex:([repositories count] - 1)];
+//  [table selectRowIndexes:index byExtendingSelection:NO];
+//  [table editColumn:0 row:([repositories count] - 1) withEvent:nil select:YES];
+//  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+//  [table reloadData];
+//}
 
 - (IBAction)removeItem:(id)sender
 {
@@ -79,8 +80,23 @@
 
 - (IBAction)closeWindow:(id)sender
 {
+  NSString *repoName = [repoNameField stringValue];
+  NSString *repoPath = [repoPathField stringValue];
+  
+  Repository *repo = [[Repository alloc] init];
+  [repo setName:repoName];
+  [repo setRepositoryPath:repoPath];
+  
+  [repositories addObject:repo];
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+  [table reloadData];
+  
   [NSApp endSheet:modalWindow];
   [modalWindow orderOut:modalWindow];
+}
+
+- (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+  return NO;
 }
 
 @end
