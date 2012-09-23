@@ -22,10 +22,11 @@
 		0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */; };
 		0AF4F432160A251500B5FC41 /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4F431160A251500B5FC41 /* SettingsWindowController.m */; };
 		D5A3ABED160E28DC00093EB4 /* GrowlController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A3ABEC160E28DC00093EB4 /* GrowlController.m */; };
-		D5A3AC29160E49AD00093EB4 /* Growl.framework in Copy Growl 2.0 */ = {isa = PBXBuildFile; fileRef = D5A3AC24160E406900093EB4 /* Growl.framework */; };
-		D5A3AC2D160E4A7E00093EB4 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
-		D5A3AC31160E4ACC00093EB4 /* Growl.framework in Copy Growl Legacy */ = {isa = PBXBuildFile; fileRef = D5A3AC2C160E4A7E00093EB4 /* Growl.framework */; };
 		D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */; };
+		D5E9D3CD160E8494009F4BBD /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9D3CC160E8494009F4BBD /* Growl.framework */; };
+		D5E9D3CF160E84A3009F4BBD /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9D3CE160E84A3009F4BBD /* Growl.framework */; };
+		D5E9D3D0160E84A8009F4BBD /* Growl.framework in Copy Growl Legacy */ = {isa = PBXBuildFile; fileRef = D5E9D3CE160E84A3009F4BBD /* Growl.framework */; };
+		D5E9D3D1160E84AA009F4BBD /* Growl.framework in Copy Growl 2.0 */ = {isa = PBXBuildFile; fileRef = D5E9D3CC160E8494009F4BBD /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D5A3AC29160E49AD00093EB4 /* Growl.framework in Copy Growl 2.0 */,
+				D5E9D3D1160E84AA009F4BBD /* Growl.framework in Copy Growl 2.0 */,
 			);
 			name = "Copy Growl 2.0";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				D5A3AC31160E4ACC00093EB4 /* Growl.framework in Copy Growl Legacy */,
+				D5E9D3D0160E84A8009F4BBD /* Growl.framework in Copy Growl Legacy */,
 			);
 			name = "Copy Growl Legacy";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,9 +93,9 @@
 		0AF4F431160A251500B5FC41 /* SettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindowController.m; sourceTree = "<group>"; };
 		D5A3ABEB160E28DC00093EB4 /* GrowlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlController.h; sourceTree = "<group>"; };
 		D5A3ABEC160E28DC00093EB4 /* GrowlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlController.m; sourceTree = "<group>"; };
-		D5A3AC24160E406900093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Growl.framework; sourceTree = "<group>"; };
-		D5A3AC2C160E4A7E00093EB4 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = External/Legacy/Growl.framework; sourceTree = "<group>"; };
 		D5A3AC32160E54FC00093EB4 /* GrowlNotifications.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GrowlNotifications.plist; sourceTree = "<group>"; };
+		D5E9D3CC160E8494009F4BBD /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = external/Growl.framework; sourceTree = "<group>"; };
+		D5E9D3CE160E84A3009F4BBD /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = external/Legacy/Growl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +104,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */,
-				D5A3AC2D160E4A7E00093EB4 /* Growl.framework in Frameworks */,
+				D5E9D3CD160E8494009F4BBD /* Growl.framework in Frameworks */,
+				D5E9D3CF160E84A3009F4BBD /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +241,7 @@
 		D5A3AC2A160E4A5900093EB4 /* 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				D5A3AC24160E406900093EB4 /* Growl.framework */,
+				D5E9D3CC160E8494009F4BBD /* Growl.framework */,
 			);
 			name = 2.0;
 			sourceTree = "<group>";
@@ -247,7 +249,7 @@
 		D5A3AC2B160E4A6600093EB4 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
-				D5A3AC2C160E4A7E00093EB4 /* Growl.framework */,
+				D5E9D3CE160E84A3009F4BBD /* Growl.framework */,
 			);
 			name = Legacy;
 			sourceTree = "<group>";
