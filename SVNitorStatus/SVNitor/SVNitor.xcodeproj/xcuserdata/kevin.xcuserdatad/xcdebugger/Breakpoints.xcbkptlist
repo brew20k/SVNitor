@@ -20,13 +20,26 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "SVNitor/GrowlController.m"
-         timestampString = "370052092.639992"
+         filePath = "SVNitor/RepositoryViewController.m"
+         timestampString = "370059094.187673"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "-init"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-saveRepo:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SVNitor/GrowlController.m"
+         timestampString = "370056154.564278"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "-registrationDictionaryForGrowl"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
