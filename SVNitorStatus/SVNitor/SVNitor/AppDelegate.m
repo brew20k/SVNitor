@@ -10,6 +10,7 @@
 #import "SettingsWindowController.h"
 #import "GrowlController.h"
 #import "Repository.h"
+#import "LogMessage.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,9 @@
 {
   // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
+  
+  // Poll for changes
+  [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
 }
 
 - (void)awakeFromNib
@@ -84,6 +88,68 @@
     
   rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
   return [rootObject valueForKey:key];
+}
+
+- (void)pollForChanges
+{
+  NSArray *repos = [self loadDataForKey:@"repository"];
+  
+  for (int i=0; i<[repos count]; i++)
+  {
+    [self pollPath:[(Repository *)[repos objectAtIndex:i] repositoryPath]];
+  }
+  
+  NSLog(@"Poll complete");
+}
+
+- (void)pollPath:(NSString *)repoPath
+{
+  NSLog(@"Checking %@ for changes", repoPath);
+
+  NSString *path = @"/usr/bin/svn";
+  NSArray *args = [NSArray arrayWithObjects:@"log", repoPath, @"-l", @"1", @"-v", nil];
+
+  NSPipe *pipe = [NSPipe pipe];
+
+  NSTask *task = [[NSTask alloc] init];
+  [task setStandardOutput:pipe];
+  [task setLaunchPath:path];
+  [task setArguments:args];
+
+  [task launch];
+
+  NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
+
+  [task waitUntilExit];
+
+  NSString *changes = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+  LogMessage *message = [[LogMessage alloc] initWithString:changes];
+
+}
+
+- (NSString *)getSVNLocation
+{
+  NSString *path = @"/usr/bin/whereis";
+  NSArray *args = [NSArray arrayWithObjects:@"svn", nil];
+  
+  NSPipe *pipe = [NSPipe pipe];
+  
+  NSTask *task = [[NSTask alloc] init];
+  [task setStandardOutput:pipe];
+  [task setLaunchPath:path];
+  [task setArguments:args];
+  
+  [task launch];
+  
+  NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
+  
+  [task waitUntilExit];
+  
+  NSString *location = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+  NSLog(@"%@", location);
+  
+  return location;
 }
 
 @end

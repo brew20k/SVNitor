@@ -95,50 +95,6 @@
   [NSApp endSheet:modalWindow];
   [modalWindow orderOut:modalWindow];
   
-  NSString *path = @"/usr/bin/svn";
-  NSArray *args = [NSArray arrayWithObjects:@"log", @"https://kkinnebrew@svn.westmonroepartners.com/svnldap/Clients/U-V/USF/USF-Chicago-MPO", @"-l", @"1", @"-v", nil];
-  
-  NSPipe *pipe = [NSPipe pipe];
-  
-  NSTask *task = [[NSTask alloc] init];
-  [task setStandardOutput:pipe];
-  [task setLaunchPath:path];
-  [task setArguments:args];
-  
-  [task launch];
-  
-  NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
-  
-  [task waitUntilExit];
-  
-  NSString *changes = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  
-  LogMessage *message = [[LogMessage alloc] initWithString:changes];
-  
-}
-
-- (NSString *)getSVNLocation
-{
-  NSString *path = @"/usr/bin/whereis";
-  NSArray *args = [NSArray arrayWithObjects:@"svn", nil];
-  
-  NSPipe *pipe = [NSPipe pipe];
-  
-  NSTask *task = [[NSTask alloc] init];
-  [task setStandardOutput:pipe];
-  [task setLaunchPath:path];
-  [task setArguments:args];
-  
-  [task launch];
-  
-  NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
-  
-  [task waitUntilExit];
-  
-  NSString *location = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  NSLog(@"%@", location);
-    
-  return location;
 }
 
 - (IBAction)closeWindow:(id)sender

@@ -8,32 +8,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SVNitor/GrowlController.m"
-         timestampString = "370052082.813937"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "15"
-         endingLineNumber = "15"
-         landmarkName = "-init"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SVNitor/RepositoryViewController.m"
-         timestampString = "370059094.187673"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "98"
-         endingLineNumber = "98"
-         landmarkName = "-saveRepo:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SVNitor/GrowlController.m"
          timestampString = "370056154.564278"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"

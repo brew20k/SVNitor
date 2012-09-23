@@ -58,8 +58,7 @@
                            @"SVNitor", GROWL_APP_NAME,
                            [[growlNotifications objectForKey:@"ALL"] allValues], GROWL_NOTIFICATIONS_ALL,
                            [[growlNotifications objectForKey:@"DEFAULT"] allValues],	GROWL_NOTIFICATIONS_DEFAULT,
-                           [[growlNotifications objectForKey:@"HUMAN_READABLE"] allValues],	GROWL_NOTIFICATIONS_HUMAN_READABLE_NAMES,
-                           nil];
+                           [[growlNotifications objectForKey:@"HUMAN_READABLE"] allValues],	GROWL_NOTIFICATIONS_HUMAN_READABLE_NAMES, nil];
   return regDict;
 }
 

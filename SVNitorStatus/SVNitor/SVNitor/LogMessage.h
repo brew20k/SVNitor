@@ -12,15 +12,13 @@
 {
   NSString *revisionNumber;
   NSString *author;
-  NSDate *date;
-  NSArray *changedFiles;
+  NSInteger *changedFiles;
   NSString *message;
 }
 
 @property (copy) NSString *revisionNumber;
 @property (copy) NSString *author;
-@property (copy) NSDate *date;
-@property (copy) NSArray *changedFiles;
+@property NSInteger *changedFiles;
 @property (copy) NSString *message;
 
 - (id)initWithString:(NSString *)log;
