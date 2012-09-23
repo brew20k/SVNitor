@@ -12,17 +12,4 @@
 
 @implementation SettingsWindowController
 
-@synthesize modalWindow;
-
-- (IBAction)openWindow:(id)sender
-{
-  [NSApp beginSheet:modalWindow modalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
-}
-
-- (IBAction)closeWindow:(id)sender
-{
-  [NSApp endSheet:modalWindow];
-  [modalWindow orderOut:modalWindow];
-}
-
 @end

@@ -9,12 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SettingsWindowController : NSWindowController
-{
-  NSWindow *modalWindow;
-}
 
-@property (nonatomic, retain) IBOutlet NSWindow *modalWindow;
-
-- (IBAction)openWindow:(id)sender;
 
 @end
