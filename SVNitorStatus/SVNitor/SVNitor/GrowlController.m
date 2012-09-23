@@ -13,13 +13,39 @@
 {
   if([GrowlApplicationBridge isGrowlRunning])
   {
+    // Insert code here to initialize your application
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *path = [[mainBundle privateFrameworksPath] stringByAppendingPathComponent:@"Growl"];
+    
+    if(NSAppKitVersionNumber >= NSAppKitVersionNumber10_6)
+      path = [path stringByAppendingPathComponent:@"2.0"];
+    else
+      path = [path stringByAppendingPathComponent:@"Legacy"];
+    
+    path = [path stringByAppendingPathComponent:@"Growl.framework"];
+    
+    NSLog(@"path: %@", path);
+    NSBundle *growlFramework = [NSBundle bundleWithPath:path];
+    if([growlFramework load])
+    {
+      NSDictionary *infoDictionary = [growlFramework infoDictionary];
+      NSLog(@"Using Growl.framework %@ (%@)",
+            [infoDictionary objectForKey:@"CFBundleShortVersionString"],
+            [infoDictionary objectForKey:(NSString *)kCFBundleVersionKey]);
+      
+      [GrowlApplicationBridge setGrowlDelegate:self];
+    }
+
+    
+    
     [GrowlApplicationBridge setGrowlDelegate:self];
-    return self;
   }
   else
   {
     //TODO: implement automatic pause of notifications.
   }
+  return self;
 }
 
 - (NSDictionary *) registrationDictionaryForGrowl
@@ -38,7 +64,6 @@
 
 -(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description
 {
-    NSString *notificationName = [[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotiferNewCommit"];
 		[GrowlApplicationBridge notifyWithTitle:title
              description:description
              notificationName:(NSString *)[[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotifierNewCommit"]
