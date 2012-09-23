@@ -22,7 +22,8 @@
   growlController = [[GrowlController alloc] init];
   
   // Poll for changes
-  [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
+  [self pollForChanges];
+  [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
 }
 
 - (void)awakeFromNib
@@ -126,8 +127,13 @@
 
   LogMessage *message = [[LogMessage alloc] initWithString:changes];
   
-  NSString *title = [NSString stringWithFormat:@"%i Changes", (int)[message changedFiles]];
-  NSString *description = [NSString stringWithFormat:@"Committed By %@", [message author]];
+  NSString *title;
+  if ((int)[message changedFiles] == 1) {
+    title = [NSString stringWithFormat:@"%i File Changed", (int)[message changedFiles]];
+  } else if ((int)[message changedFiles] > 1) {
+    title = [NSString stringWithFormat:@"%i Files Changed", (int)[message changedFiles]];
+  }
+  NSString *description = [NSString stringWithFormat:@"Committed by: %@", [message author]];
   
   [growlController notifyGrowl:title withDesc:description];
 

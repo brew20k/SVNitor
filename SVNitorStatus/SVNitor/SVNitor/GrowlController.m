@@ -72,7 +72,7 @@
              notificationName:notifierName
              iconData:nil
              priority:0
-             isSticky:YES
+             isSticky:NO
              clickContext:nil
              identifier:@"SVNitor"];
     }
