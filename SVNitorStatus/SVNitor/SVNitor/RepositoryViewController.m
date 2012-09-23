@@ -55,18 +55,10 @@
   }
 }
 
-//- (IBAction)addItem:(id)sender
-//{
-//  [repositories addObject:[[Repository alloc] init]];
-//  NSIndexSet *index = [[NSIndexSet alloc] initWithIndex:([repositories count] - 1)];
-//  [table selectRowIndexes:index byExtendingSelection:NO];
-//  [table editColumn:0 row:([repositories count] - 1) withEvent:nil select:YES];
-//  [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
-//  [table reloadData];
-//}
-
 - (IBAction)removeItem:(id)sender
 {
+  // TODO: should show confirmation dialog
+  
   if ([table selectedRow] < 0 || [table selectedRow] >= [repositories count])
     return;
   [repositories removeObjectAtIndex:[table selectedRow]];
@@ -87,6 +79,8 @@
   Repository *repo = [[Repository alloc] init];
   [repo setName:repoName];
   [repo setRepositoryPath:repoPath];
+  
+  // TODO: should check if repository is already added
   
   [repositories addObject:repo];
   [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];

@@ -22,12 +22,9 @@
 @property (assign) IBOutlet NSMenuItem *settingsBtn;
 @property (assign) IBOutlet NSMenuItem *quitBtn;
 @property (assign) IBOutlet NSMenuItem *aboutBtn;
-@property (assign) IBOutlet NSMenuItem *notifyGrowlBtn;
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem;
 - (IBAction)quitApplication:(id)sender;
-- (IBAction)notifyGrowl:(id)sender;
-
 
 - (NSString *)pathForDataFile;
 

@@ -44,11 +44,6 @@
   [NSApp terminate: nil];
 }
 
--(IBAction)notifyGrowl:(id)sender
-{
-
-}
-
 -(IBAction)openSettings:(id)sender
 {
   settingsWindow = [[SettingsWindowController alloc] initWithWindowNibName:@"SettingsWindow"];

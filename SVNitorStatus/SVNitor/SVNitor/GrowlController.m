@@ -44,7 +44,7 @@
   }
   else
   {
-    //TODO: implement automatic pause of notifications.
+    // TODO: implement automatic pause of notifications.
   }
   return self;
 }
@@ -63,6 +63,8 @@
 
 -(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description
 {
+    // TODO: show multiple notifications on screen at once
+  
     if([GrowlApplicationBridge respondsToSelector:@selector(notifyWithTitle:description:notificationName:iconData:priority:isSticky:clickContext:identifier:)])
     {
       NSString *notifierName = [[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotifierNewCommit"];
