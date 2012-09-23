@@ -31,6 +31,10 @@
 - (IBAction)removeItem:(id)sender;
 
 - (IBAction)openWindow:(id)sender;
+- (IBAction)saveRepo:(id)sender;
 - (IBAction)closeWindow:(id)sender;
+
+- (IBAction)browseToFile:(id)sender;
+
 
 @end

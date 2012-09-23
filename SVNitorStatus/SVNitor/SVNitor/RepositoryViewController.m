@@ -78,7 +78,7 @@
   [NSApp beginSheet:modalWindow modalForWindow:repoWindow modalDelegate:self didEndSelector:nil contextInfo:nil];
 }
 
-- (IBAction)closeWindow:(id)sender
+- (IBAction)saveRepo:(id)sender
 {
   NSString *repoName = [repoNameField stringValue];
   NSString *repoPath = [repoPathField stringValue];
@@ -95,8 +95,37 @@
   [modalWindow orderOut:modalWindow];
 }
 
+- (IBAction)closeWindow:(id)sender
+{
+  [NSApp endSheet:modalWindow];
+  [modalWindow orderOut:modalWindow];
+}
+
 - (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
   return NO;
+}
+
+- (IBAction)browseToFile:(id)sender
+{
+  NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+  
+  [openDlg setCanChooseFiles:NO];
+  
+  [openDlg setCanChooseDirectories:YES];
+
+  if ([openDlg runModal]) {
+
+    NSURL* url = [openDlg directoryURL];
+    
+    [repoPathField setStringValue:[url path]];
+    
+    NSArray *parts = [[url path] componentsSeparatedByString:@"/"];
+    
+    if ([parts lastObject]) {
+      [repoNameField setStringValue:[parts lastObject]];
+      [repoWindow makeFirstResponder:repoNameField];
+    }
+  }
 }
 
 @end
