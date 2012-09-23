@@ -9,6 +9,7 @@
 #import "GrowlController.h"
 
 @implementation GrowlController
+
 - (id) init
 {
   if([GrowlApplicationBridge isGrowlRunning])

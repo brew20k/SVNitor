@@ -72,9 +72,7 @@
   
   NSMutableDictionary * rootObject;
   rootObject = [NSMutableDictionary dictionary];
-  
-  NSLog(@"Saving Data");
-  
+    
   [rootObject setValue:data forKey:key];
   [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
@@ -83,9 +81,7 @@
 {
   NSString     * path        = [self pathForDataFile];
   NSDictionary * rootObject;
-  
-  NSLog(@"Loading Data");
-  
+    
   rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
   return [rootObject valueForKey:key];
 }
