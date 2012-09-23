@@ -56,21 +56,32 @@
   
   NSDictionary *regDict = [NSDictionary dictionaryWithObjectsAndKeys:
                            @"SVNitor", GROWL_APP_NAME,
-                           [growlNotifications objectForKey:@"ALL"], GROWL_NOTIFICATIONS_ALL,
-                           [growlNotifications objectForKey:@"DEFAULT"],	GROWL_NOTIFICATIONS_DEFAULT,
-                           [growlNotifications objectForKey:@"HUMAN_READABLE"],	GROWL_NOTIFICATIONS_HUMAN_READABLE_NAMES,
+                           [[growlNotifications objectForKey:@"ALL"] allValues], GROWL_NOTIFICATIONS_ALL,
+                           [[growlNotifications objectForKey:@"DEFAULT"] allValues],	GROWL_NOTIFICATIONS_DEFAULT,
+                           [[growlNotifications objectForKey:@"HUMAN_READABLE"] allValues],	GROWL_NOTIFICATIONS_HUMAN_READABLE_NAMES,
                            nil];
   return regDict;
 }
 
 -(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description
 {
-		[GrowlApplicationBridge notifyWithTitle:title
+    if([GrowlApplicationBridge respondsToSelector:@selector(notifyWithTitle:description:notificationName:iconData:priority:isSticky:clickContext:identifier:)])
+    {
+      NSString *notifierName = [[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotifierNewCommit"];
+      NSLog(@"Notifier Name: %@", notifierName);
+      [GrowlApplicationBridge notifyWithTitle:title
              description:description
-             notificationName:(NSString *)[[growlNotifications objectForKey:@"ALL"] valueForKey:@"NotifierNewCommit"]
+             notificationName:notifierName
              iconData:nil
              priority:0
              isSticky:YES
-             clickContext:nil];
+             clickContext:nil
+             identifier:@"SVNitor"];
+    }
+  else
+  {
+    NSLog(@"Your Growl is borked");
+  }
+    
 }
 @end
