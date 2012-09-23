@@ -19,6 +19,8 @@
   // Insert code here to initialize your application
   [statusMenu setAutoenablesItems:YES];
   
+  growlController = [[GrowlController alloc] init];
+  
   // Poll for changes
   [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
 }
@@ -43,8 +45,6 @@
 
 -(IBAction)notifyGrowl:(id)sender
 {
-  growlController = [[GrowlController alloc] init];
-  [growlController notifyGrowl:@"title" withDesc:@"desc"];
 
 }
 
@@ -125,6 +125,11 @@
   NSString *changes = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
   LogMessage *message = [[LogMessage alloc] initWithString:changes];
+  
+  NSString *title = [NSString stringWithFormat:@"%i Changes", (int)[message changedFiles]];
+  NSString *description = [NSString stringWithFormat:@"Committed By %@", [message author]];
+  
+  [growlController notifyGrowl:title withDesc:description];
 
 }
 
