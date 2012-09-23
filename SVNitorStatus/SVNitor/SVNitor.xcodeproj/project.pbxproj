@@ -43,8 +43,8 @@
 		D5A3AC23160E404800093EB4 /* Copy Growl 2.0 */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstPath = Contents/Frameworks/Growl/2.0;
+			dstSubfolderSpec = 1;
 			files = (
 				D5E9D3D1160E84AA009F4BBD /* Growl.framework in Copy Growl 2.0 */,
 			);
@@ -54,8 +54,8 @@
 		D5A3AC2E160E4A9A00093EB4 /* Copy Growl Legacy */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstPath = Contents/Frameworks/Growl/Legacy;
+			dstSubfolderSpec = 1;
 			files = (
 				D5E9D3D0160E84A8009F4BBD /* Growl.framework in Copy Growl Legacy */,
 			);
