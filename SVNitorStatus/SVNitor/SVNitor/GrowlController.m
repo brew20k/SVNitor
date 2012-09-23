@@ -71,7 +71,6 @@
              iconData:nil
              priority:0
              isSticky:YES
-             clickContext:nil
-             identifier:@"SVNitor identifier"];
+             clickContext:nil];
 }
 @end
