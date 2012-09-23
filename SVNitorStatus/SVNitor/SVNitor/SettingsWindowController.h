@@ -10,4 +10,5 @@
 
 @interface SettingsWindowController : NSWindowController
 
+
 @end

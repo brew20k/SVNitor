@@ -12,12 +12,20 @@
 {
   NSMutableArray *repositories;
   NSTableView *table;
+  NSWindow *modalWindow;
+  NSWindow *repoWindow;
 }
+
+@property (nonatomic, retain) IBOutlet NSWindow *modalWindow;
+@property (nonatomic, retain) IBOutlet NSWindow *repoWindow;
 
 @property (copy) NSMutableArray *repositories;
 @property (nonatomic, retain) IBOutlet NSTableView *table;
 
 - (IBAction)addItem:(id)sender;
 - (IBAction)removeItem:(id)sender;
+
+- (IBAction)openWindow:(id)sender;
+- (IBAction)closeWindow:(id)sender;
 
 @end

@@ -14,6 +14,8 @@
 
 @synthesize repositories;
 @synthesize table;
+@synthesize repoWindow;
+@synthesize modalWindow;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,6 +70,17 @@
   [repositories removeObjectAtIndex:[table selectedRow]];
   [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
   [table reloadData];
+}
+
+- (IBAction)openWindow:(id)sender
+{
+  [NSApp beginSheet:modalWindow modalForWindow:repoWindow modalDelegate:self didEndSelector:nil contextInfo:nil];
+}
+
+- (IBAction)closeWindow:(id)sender
+{
+  [NSApp endSheet:modalWindow];
+  [modalWindow orderOut:modalWindow];
 }
 
 @end
