@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A2B61A0160D6D4200C3CFD9 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B619F160D6D4200C3CFD9 /* Repository.m */; };
 		0A3F79FF160E6604003A8364 /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F79FE160E6604003A8364 /* RepositoryViewController.m */; };
+		0A42A6C7161D32D2004BEE45 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A42A6C6161D32D2004BEE45 /* Icon.png */; };
+		0A42A6CA161D34D1004BEE45 /* IconAlt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A42A6C9161D34D1004BEE45 /* IconAlt.png */; };
 		0A9A76C3160EA60B006AD373 /* LogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A76C2160EA60B006AD373 /* LogMessage.m */; };
 		0AF4F3E9160955BB00B5FC41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF4F3E8160955BB00B5FC41 /* Cocoa.framework */; };
 		0AF4F3F3160955BB00B5FC41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4F3F1160955BB00B5FC41 /* InfoPlist.strings */; };
@@ -70,6 +72,8 @@
 		0A2B619F160D6D4200C3CFD9 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 		0A3F79FD160E6604003A8364 /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
 		0A3F79FE160E6604003A8364 /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
+		0A42A6C6161D32D2004BEE45 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../../../../XCode/SVNitor/SVNitor/SVNitor/Icon.png; sourceTree = "<group>"; };
+		0A42A6C9161D34D1004BEE45 /* IconAlt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconAlt.png; path = ../../../../../XCode/SVNitor/SVNitor/SVNitor/IconAlt.png; sourceTree = "<group>"; };
 		0A9A76C1160EA60B006AD373 /* LogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMessage.h; sourceTree = "<group>"; };
 		0A9A76C2160EA60B006AD373 /* LogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogMessage.m; sourceTree = "<group>"; };
 		0AF4F3E4160955BA00B5FC41 /* SVNitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVNitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +213,8 @@
 		0AF4F42616095C0700B5FC41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0A42A6C9161D34D1004BEE45 /* IconAlt.png */,
+				0A42A6C6161D32D2004BEE45 /* Icon.png */,
 				0AF4F3FD160955BB00B5FC41 /* MainMenu.xib */,
 				0AF4F42E160A245100B5FC41 /* SettingsWindow.xib */,
 			);
@@ -337,6 +343,8 @@
 				0AF4F3FF160955BB00B5FC41 /* MainMenu.xib in Resources */,
 				0AF4F42F160A245100B5FC41 /* SettingsWindow.xib in Resources */,
 				D5A3AC33160E54FC00093EB4 /* GrowlNotifications.plist in Resources */,
+				0A42A6C7161D32D2004BEE45 /* Icon.png in Resources */,
+				0A42A6CA161D34D1004BEE45 /* IconAlt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

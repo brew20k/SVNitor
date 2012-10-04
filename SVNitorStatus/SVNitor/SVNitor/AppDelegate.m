@@ -14,23 +14,41 @@
 
 @implementation AppDelegate
 
+#pragma mark -
+#pragma mark Initialization
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+  // setup status menu
   [statusMenu setAutoenablesItems:YES];
   
+  // initialize growl controller
   growlController = [[GrowlController alloc] init];
   
-  // Poll for changes
+  // check for changes
   [self pollForChanges];
-  [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
+  
+  // poll at 90 second interval
+  [NSTimer scheduledTimerWithTimeInterval:90 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
 }
 
 - (void)awakeFromNib
 {
+  // generate new status item
   statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+  
+  // bind to status mar
   [statusItem setMenu:statusMenu];
-  [statusItem setTitle:@"S"];
+  
+  // load images
+  NSImage *image = [NSImage imageNamed:@"Icon.png"];
+  NSImage *altImage = [NSImage imageNamed:@"IconAlt.png"];
+  
+  // bind images to status item
+  [statusItem setImage:image];
+  [statusItem setAlternateImage:altImage];
+  
+  // highlight on click
   [statusItem setHighlightMode:YES];
 }
 
@@ -38,6 +56,9 @@
 {
   return YES;
 }
+
+#pragma mark -
+#pragma mark User Actions
 
 -(IBAction)quitApplication:(id)sender
 {
@@ -50,6 +71,14 @@
   [settingsWindow showWindow:nil];
 }
 
+#pragma mark -
+#pragma mark Data Storage
+
+/**
+ * Returns the path for the settings file containing the list of
+ * repositories to load.
+ * @return NSString
+ */
 - (NSString *)pathForDataFile
 {
   NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -86,12 +115,16 @@
   return [rootObject valueForKey:key];
 }
 
+#pragma mark -
+#pragma mark Polling
+
 - (void)pollForChanges
 {
   NSArray *repos = [self loadDataForKey:@"repository"];
   
   for (int i=0; i<[repos count]; i++)
   {
+    NSLog(@"%@", [[repos objectAtIndex:i] repositoryPath]);
     [self pollPath:[(Repository *)[repos objectAtIndex:i] repositoryPath]];
   }
   
@@ -122,17 +155,50 @@
 
   LogMessage *message = [[LogMessage alloc] initWithString:changes];
   
-  NSString *title;
-  if ((int)[message changedFiles] == 1) {
-    title = [NSString stringWithFormat:@"%i File Changed", (int)[message changedFiles]];
-  } else if ((int)[message changedFiles] > 1) {
-    title = [NSString stringWithFormat:@"%i Files Changed", (int)[message changedFiles]];
+  NSMutableArray *repositories = [(AppDelegate *)[[NSApplication sharedApplication] delegate] loadDataForKey:@"repository"];
+  
+  Repository *repo;
+  
+  for (int i=0; i<[repositories count]; i++)
+  {
+    if ([[[repositories objectAtIndex:i] repositoryPath] isEqualToString:repoPath]) {
+      repo = [repositories objectAtIndex:i];
+      break;
+    }
   }
+  
+  NSString *plural;
+  NSString *title;
+  
   NSString *description = [NSString stringWithFormat:@"Committed by: %@", [message author]];
   
-  [growlController notifyGrowl:title withDesc:description];
+  NSString *currentRevision = [repo revision];
+  NSString *messageRevision = [message revisionNumber];
+  
+  if (repo && ![currentRevision isEqualToString:messageRevision])
+  {
+    
+    if (repo )
+    
+    if ((int)[message changedFiles] == 1) {
+      plural = @"File";
+    } else if ((int)[message changedFiles] > 1) {
+      plural = @"Files";
+    }
+    
+    title = [NSString stringWithFormat:@"%i %@ Changed", (int)[message changedFiles], plural];
+
+    [growlController notifyGrowl:title withDesc:description];
+    
+    [repo setRevision:currentRevision];
+    
+    [(AppDelegate *)[[NSApplication sharedApplication] delegate] saveData:repositories forKey:@"repository"];
+  }
 
 }
+
+#pragma mark -
+#pragma mark Configuration
 
 - (NSString *)getSVNLocation
 {

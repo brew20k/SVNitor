@@ -13,9 +13,11 @@
 @private
   NSString *name;
   NSString *repositoryPath;
+  NSString *revision;
 }
 
 @property (copy) NSString *name;
 @property (copy) NSString *repositoryPath;
+@property (copy) NSString *revision;
 
 @end

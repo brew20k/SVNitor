@@ -19,6 +19,7 @@
   if (self) {
     name = [[NSString alloc] initWithString:@"My Repository"];
     repositoryPath = [[NSString alloc] initWithString:@"http://www.orangelit.com/myrepo"];
+    revision = [[NSString alloc] initWithString:@"r0"];
   }
   return self;
 }
@@ -29,6 +30,7 @@
   {
     [self setName: [coder decodeObjectForKey:@"name"]];
     [self setRepositoryPath: [coder decodeObjectForKey:@"repositoryPath"]];
+    [self setRevision: [coder decodeObjectForKey:@"revision"]];
   }
   return self;
 }
@@ -37,6 +39,7 @@
 {
   [coder encodeObject:name forKey:@"name"];
   [coder encodeObject:repositoryPath forKey:@"repositoryPath"];
+  [coder encodeObject:revision forKey:@"revision"];
 }
 
 @end
