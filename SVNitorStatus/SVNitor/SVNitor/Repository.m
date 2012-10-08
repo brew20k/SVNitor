@@ -21,6 +21,7 @@
     repositoryPath = [[NSString alloc] initWithString:@"http://www.orangelit.com/myrepo"];
     revision = [[NSString alloc] initWithString:@"r0"];
   }
+  
   return self;
 }
 
