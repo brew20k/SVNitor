@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SettingsWindowController.h"
-#import "GrowlController.h"
+#import "NotificationController.h"
 #import "Repository.h"
 #import "LogMessage.h"
 
@@ -22,14 +22,14 @@
   // setup status menu
   [statusMenu setAutoenablesItems:YES];
   
-  // initialize growl controller
-  growlController = [[GrowlController alloc] init];
+  // initialize notofication controller
+  notificationController = [[NotificationController alloc] init];
   
   // check for changes
   [self pollForChanges];
   
   // poll at 90 second interval
-  [NSTimer scheduledTimerWithTimeInterval:90 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
+  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(pollForChanges) userInfo:nil repeats:YES];
 }
 
 - (void)awakeFromNib
@@ -188,7 +188,7 @@
     
     title = [NSString stringWithFormat:@"%i %@ Changed", (int)[message changedFiles], plural];
 
-    [growlController notifyGrowl:title withDesc:description];
+    [notificationController displayNotification:title withDesc:description];
     
     [repo setRevision:currentRevision];
     
@@ -223,5 +223,4 @@
   
   return location;
 }
-
 @end

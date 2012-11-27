@@ -7,15 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Growl/Growl.h>
 
-#import "GrowlController.h"
+#import "NotificationController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
   IBOutlet NSMenu *statusMenu;
   NSStatusItem *statusItem;
   NSWindowController *settingsWindow;
-  GrowlController *growlController;
+  NotificationController *notificationController;
 }
 
 @property (assign) IBOutlet NSMenuItem *pauseBtn;
