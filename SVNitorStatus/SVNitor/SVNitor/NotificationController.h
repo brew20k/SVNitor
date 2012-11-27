@@ -1,20 +1,16 @@
 //
-//  GrowlAppDelegate.h
+//  NotificationController.h
 //  SVNitor
 //
 //  Created by Letteer on 9/22/12.
 //  Copyright (c) 2012 Letteer's Home. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
-#import <Growl/Growl.h>
 
-@interface GrowlController : NSObject <GrowlApplicationBridgeDelegate>
+@interface NotificationController : NSObject <NSUserNotificationCenterDelegate>
 {
-  NSDictionary *growlNotifications;
 }
-
--(void) notifyGrowl: (NSString *)title withDesc:(NSString *)description;
+-(void) displayNotification: (NSString *)title withDesc:(NSString *)description;
 
 @end
